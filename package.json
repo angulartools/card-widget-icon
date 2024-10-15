@@ -1,9 +1,9 @@
 {
   "name": "@angulartoolsdr/card-widget-icon",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Um widget de cartão com ícone para dashboards em Angular",
   "author": "Daniele Espindola",
-  "license": "MIT",  
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/angulartools/card-widget-icon.git"
@@ -14,7 +14,7 @@
     "card",
     "icon"
   ],
-  "main": "fesm2022/angulartoolsdr-card-widget-icon.mjs", 
+  "main": "fesm2022/angulartoolsdr-card-widget-icon.mjs",
   "module": "fesm2022/angulartoolsdr-card-widget-icon.mjs",
   "es2022": "fesm2022/angulartoolsdr-card-widget-icon.mjs",
   "typings": "index.d.ts",
