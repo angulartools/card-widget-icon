@@ -14,9 +14,9 @@
     "card",
     "icon"
   ],
-  "main": "fesm2022/angulartoolsdr-card-widget-icon.mjs",
-  "module": "fesm2022/angulartoolsdr-card-widget-icon.mjs",
-  "es2022": "fesm2022/angulartoolsdr-card-widget-icon.mjs",
+  "main": "esm2022/angulartoolsdr-card-widget-icon.mjs",
+  "module": "esm2022/angulartoolsdr-card-widget-icon.mjs",
+  "es2022": "esm2022/angulartoolsdr-card-widget-icon.mjs",
   "typings": "index.d.ts",
   "peerDependencies": {
     "@angular/common": "^13.0.0",
