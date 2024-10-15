@@ -1,5 +1,5 @@
 {
-  "name": "card-widget-icon",
+  "name": "@angulartoolsdr/card-widget-icon",
   "version": "1.0.1",
   "description": "Um widget de cartão com ícone para dashboards em Angular",
   "author": "Seu Nome",
