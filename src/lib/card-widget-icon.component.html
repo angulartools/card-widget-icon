@@ -1,0 +1,114 @@
+@if (!isMaximize) {
+    <div style="height: 118px;" class="card mat-card widget-icon" (click)="cardClick()" >
+      <div class="card-body clickable-card" style="padding: 1rem;" [class.selected]="selecionado === true" [class.disabled]="disabled">
+        <div [ngClass]="'wid-icon-'+cor" class="media-body text-right">
+          @if (!loading) {
+            <p class="text-muted mb-1 mt-n1 font-16">{{label}} {{info}}</p>
+          }
+          @if (loading) {
+            <ngx-skeleton-loader
+              [theme]="{ marginTop: '-5px' }">>
+            </ngx-skeleton-loader>
+          }
+        </div>
+        <div class="media mt-2">
+          <div class="avatar-md text-center" style="width: 4.5rem">
+            @if (!loading) {
+              <i [ngClass]="icon+' text-'+cor" style="margin-top: -2px;" class="fa-2x mb-0"></i>
+            }
+            @if (!loading) {
+              <h6 [ngClass]="'text-'+cor" class="my-0 m-1">{{percentual | number: '1.2-2' : translate.currentLang}}%</h6>
+            }
+            @if (loading) {
+              <ngx-skeleton-loader
+                appearance="circle"
+                [theme]="{ height: '45px', width: '45px', marginTop: '-10px'}">
+              </ngx-skeleton-loader>
+            }
+          </div>
+          <div [ngClass]="'wid-icon-'+cor" class="media-body text-right">
+            @if (loading) {
+              <ngx-skeleton-loader
+            [theme]="{
+              height: '55px', marginTop: '-10px'
+            }"
+              ></ngx-skeleton-loader>
+            }
+            @if (!loading) {
+              <h2 class="mb-1 counter" [ngStyle]="{'margin-top': (totalFiltro !== null && totalFiltro !== undefined) ? '-3px' : '-14px' }">
+                @if (totalFiltro !== null && totalFiltro !== undefined) {
+                  <span>
+                    {{totalFiltro}}
+                  </span>
+                }
+              </h2>
+            }
+            @if (!loading && totalFiltro !== null && totalFiltro !== undefined) {
+              <div class="mt-n1">
+                <p class="text-muted mb-1 font-16">({{'DE' | translate}} {{total}})</p>
+              </div>
+            }
+            @if (!loading && !(totalFiltro !== null && totalFiltro !== undefined)) {
+              <h2 class="mb-1 counter">
+                {{total}}
+              </h2>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  @if (isMaximize) {
+    <div style="height: 118px;" class="card mat-card widget-icon" (click)="cardClick()" >
+      <div class="card-body clickable-card" style="padding: .5rem;" [class.selected]="selecionado === true" [class.disabled]="disabled">
+        <div [ngClass]="'wid-icon-'+cor" class="media-body text-center d-inline-flex" style="place-items: center;">
+          @if (!loading) {
+            <i [ngClass]="icon+' text-'+cor" class="m-0 mr-1" style="font-size: 14px"></i>
+          }
+          @if (!loading) {
+            <div class="text-muted font-15">{{label}} {{info}}</div>
+          }
+          @if (loading) {
+  <ngx-skeleton-loader [theme]="{
+          height: '16px',
+          width: '80px'
+        }"></ngx-skeleton-loader>
+          }
+        </div>
+        <div class="media">
+          <div [ngClass]="'wid-icon-'+cor" class="media-body text-center">
+            @if (loading) {
+              <ngx-skeleton-loader
+              [theme]="{
+                height: '55px'
+              }"
+              ></ngx-skeleton-loader>
+            }
+            @if (!loading) {
+              <h2 class="mb-1 counter">
+                @if (totalFiltro !== null && totalFiltro !== undefined) {
+                  <span>
+                    {{totalFiltro}}
+                  </span>
+                }
+              </h2>
+            }
+            @if (!loading && totalFiltro !== null && totalFiltro !== undefined) {
+              <div class="mt-n1">
+                <small class="text-muted">({{'DE' | translate}} {{total}})</small>
+              </div>
+            }
+            @if (!loading && !(totalFiltro !== null && totalFiltro !== undefined)) {
+              <h2 class="mb-1 counter">
+                {{total}}
+              </h2>
+            }
+            @if (!loading) {
+              <h6 [ngClass]="'text-'+cor" class="my-0 m-1">{{percentual | number: '1.2-2' : translate.currentLang}}%</h6>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  

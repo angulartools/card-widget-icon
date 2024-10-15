@@ -1,0 +1,40 @@
+.card {
+  width: 100%;
+  height: 100%;
+}
+
+:host ::ng-deep .mat-mdc-icon-button {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.card-body.clickable-card {
+cursor: pointer;
+border-radius: 0.75rem;
+}
+
+.card-body.clickable-card.selected {
+-webkit-box-shadow:inset 0px 0px 0px 2px var(--theme-primary-A400);
+-moz-box-shadow:inset 0px 0px 0px 2px var(--theme-primary-A400);
+box-shadow:inset 0px 0px 0px 2px var(--theme-primary-A400);
+}
+
+.card-body.clickable-card:not(.disabled):hover {
+-webkit-box-shadow:inset 0px 0px 0px 2px var(--theme-primary-A400);
+-moz-box-shadow:inset 0px 0px 0px 2px var(--theme-primary-A400);
+box-shadow:inset 0px 0px 0px 2px var(--theme-primary-A400);
+}
+
+.mat-mdc-card {
+padding: 0px !important;
+}
+
+.card {
+margin-bottom: 0px !important;
+}
+
+.card-body.disabled {
+background-color: #eeeeeec7;
+cursor: default;
+}
