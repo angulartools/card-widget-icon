@@ -1,6 +1,6 @@
 {
   "name": "@angulartoolsdr/card-widget-icon",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Um widget de cartão com ícone para dashboards em Angular",
   "author": "Daniele Espindola",
   "license": "MIT",
