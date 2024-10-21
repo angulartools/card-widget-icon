@@ -14,7 +14,9 @@
         <div class="media mt-2">
           <div class="avatar-md text-center" style="width: 4.5rem">
             @if (!loading) {
-              <i [ngClass]="icon+' text-'+cor" style="margin-top: -2px;" class="fa-2x mb-0"></i>
+              <span>
+                <i [ngClass]="icon+' text-'+cor" style="margin-top: -2px;" class="fa-2x mb-0"></i>
+              </span>
             }
             @if (!loading) {
               <h6 [ngClass]="'text-'+cor" class="my-0 m-1">{{percentual | number: '1.2-2' : translate.currentLang}}%</h6>
@@ -63,7 +65,9 @@
       <div class="card-body clickable-card" style="padding: .5rem;" [class.selected]="selecionado === true" [class.disabled]="disabled">
         <div [ngClass]="'wid-icon-'+cor" class="media-body text-center d-inline-flex" style="place-items: center;">
           @if (!loading) {
-            <i [ngClass]="icon+' text-'+cor" class="m-0 mr-1" style="font-size: 14px"></i>
+            <span>
+              <i [ngClass]="icon+' text-'+cor" class="m-0 mr-1" style="font-size: 14px"></i>
+            </span>
           }
           @if (!loading) {
             <div class="text-muted font-15">{{label}} {{info}}</div>
