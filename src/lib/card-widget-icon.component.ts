@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslationPipe, TranslationService } from '@angulartoolsdr/translation';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { DecimalPipe, NgClass, NgIf, NgStyle } from '@angular/common';
 
@@ -7,7 +7,7 @@ import { DecimalPipe, NgClass, NgIf, NgStyle } from '@angular/common';
     selector: 'lib-card-widget-icon',
     templateUrl: './card-widget-icon.component.html',
     styleUrls: ['./card-widget-icon.component.scss'],
-    imports: [NgClass, NgStyle, NgIf, DecimalPipe, TranslateModule, NgxSkeletonLoaderModule]
+    imports: [NgClass, NgStyle, NgIf, DecimalPipe, TranslationPipe, NgxSkeletonLoaderModule]
 })
 export class CardWidgetIconComponent {
 
@@ -53,7 +53,7 @@ export class CardWidgetIconComponent {
   @Output() onCardClick = new EventEmitter();
   selecionado = false;
 
-  constructor(protected translate: TranslateService){}
+  constructor(protected translate: TranslationService){}
 
   cardClick() {
     if (!this.disabled) {
