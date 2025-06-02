@@ -2,12 +2,13 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TranslationPipe, TranslationService } from '@angulartoolsdr/translation';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { DecimalPipe, NgClass, NgIf, NgStyle } from '@angular/common';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
     selector: 'lib-card-widget-icon',
     templateUrl: './card-widget-icon.component.html',
     styleUrls: ['./card-widget-icon.component.scss'],
-    imports: [NgClass, NgStyle, NgIf, DecimalPipe, TranslationPipe, NgxSkeletonLoaderModule]
+    imports: [NgClass, NgStyle, NgIf, DecimalPipe, TranslationPipe, NgxSkeletonLoaderModule, MatProgressSpinnerModule]
 })
 export class CardWidgetIconComponent {
 

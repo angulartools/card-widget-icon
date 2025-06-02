@@ -20,13 +20,28 @@
                 </span>
               }
               @else {
-                <div class="progress-container">
-                  <div class="progress-bar" [style]="'width: '+percentual+'%;'"></div>
-                  <div class="progress-percentage">{{percentual | number: '1.2-2' : translate.currentLang}}% <i class="fa-solid fa-percent"></i></div>
+                <div class="spinner-wrapper">
+                  <mat-progress-spinner
+                    mode="determinate"
+                    diameter="60"
+                    strokeWidth="6"
+                    [value]="100"
+                    color="warn"
+                    class="spinner-track spinner-track-danger">
+                  </mat-progress-spinner>
+        
+                  <mat-progress-spinner
+                    mode="determinate"
+                    [value]="percentual"
+                    diameter="60"
+                    strokeWidth="6"
+                    color="primary"
+                    class="spinner-value spinner-danger">
+                  </mat-progress-spinner>
                 </div>
               }
             }
-            @if (!loading && !isProgress) {
+            @if (!loading) {
               <h6 [ngClass]="'text-'+cor" class="my-0 m-1">{{percentual | number: '1.2-2' : translate.currentLang}}%</h6>
             }
             @if (loading) {
@@ -78,9 +93,24 @@
               <i [ngClass]="icon+' text-'+cor" class="m-0 mr-1" style="font-size: 14px"></i>
             </span>
             } @else {
-              <div class="progress-container">
-                <div class="progress-bar" [style]="'width: '+percentual+'%;'"></div>
-                <div class="progress-percentage">{{percentual | number: '1.2-2' : translate.currentLang}}% <i class="fa-solid fa-percent"></i></div>
+              <div class="spinner-wrapper">
+                <mat-progress-spinner
+                  mode="determinate"
+                  diameter="60"
+                  strokeWidth="6"
+                  [value]="100"
+                  color="warn"
+                  class="spinner-track spinner-track-danger">
+                </mat-progress-spinner>
+      
+                <mat-progress-spinner
+                  mode="determinate"
+                  [value]="percentual"
+                  diameter="60"
+                  strokeWidth="6"
+                  color="primary"
+                  class="spinner-value spinner-danger">
+                </mat-progress-spinner>
               </div>
             }
           }
