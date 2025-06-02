@@ -17,6 +17,7 @@ export class CardWidgetIconComponent {
   @Input() totalFiltro: number | undefined;
   @Input() cor: string | undefined;
   @Input() icon: string | undefined;
+  @Input() isProgress = false;
 
   @Input('percentual')
   set _percentual(value: number) {
