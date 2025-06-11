@@ -1,13 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TranslationPipe, TranslationService } from '@angulartoolsdr/translation';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
-import { DecimalPipe, NgClass, NgIf, NgStyle } from '@angular/common';
+import { DecimalPipe, NgClass, NgStyle } from '@angular/common';
 
 @Component({
     selector: 'lib-card-widget-icon',
     templateUrl: './card-widget-icon.component.html',
     styleUrls: ['./card-widget-icon.component.scss'],
-    imports: [NgClass, NgStyle, NgIf, DecimalPipe, TranslationPipe, NgxSkeletonLoaderModule]
+    imports: [NgClass, NgStyle, DecimalPipe, TranslationPipe, NgxSkeletonLoaderModule]
 })
 export class CardWidgetIconComponent {
 
