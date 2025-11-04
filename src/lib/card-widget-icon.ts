@@ -5,11 +5,11 @@ import { DecimalPipe, NgClass, NgStyle } from '@angular/common';
 
 @Component({
     selector: 'lib-card-widget-icon',
-    templateUrl: './card-widget-icon.component.html',
-    styleUrls: ['./card-widget-icon.component.scss'],
+    templateUrl: './card-widget-icon.html',
+    styleUrls: ['./card-widget-icon.scss'],
     imports: [NgClass, NgStyle, DecimalPipe, TranslationPipe, NgxSkeletonLoaderModule]
 })
-export class CardWidgetIconComponent {
+export class CardWidgetIcon {
 
   @Input() label: string | undefined;
   @Input() info: string | undefined;
