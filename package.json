@@ -1,6 +1,6 @@
 {
   "name": "@angulartoolsdr/card-widget-icon",
-  "version": "21.0.1",
+  "version": "21.1.3",
   "description": "Um widget de cartão com ícone para dashboards em Angular",
   "author": "Daniele Espindola",
   "license": "MIT",
@@ -19,9 +19,9 @@
   "es2022": "esm2022/angulartoolsdr-card-widget-icon.mjs",
   "typings": "index.d.ts",
   "peerDependencies": {
-    "@angular/common": "21.0.1",
-    "@angular/core": "21.0.1",
-    "ngx-skeleton-loader": "11.3.0",
-    "@angulartoolsdr/translation": "21.0.1"
+    "@angular/common": "21.1.3",
+    "@angular/core": "21.1.3",
+    "ngx-skeleton-loader": "12.0.0",
+    "@angulartoolsdr/translation": "21.1.3"
   }
 }
