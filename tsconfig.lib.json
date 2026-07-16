@@ -8,10 +8,23 @@
     "inlineSources": true,
     "types": [],
     "paths": {
-      "@angulartoolsdr/translation": ["../../dist/translation"]
-    } 
+      "@angulartoolsdr/translation": [
+        "../../dist/translation"
+      ],
+      "@angulartoolsdr/shared-utils": [
+        "../../dist/shared-utils"
+      ],
+    }
   },
   "exclude": [
     "**/*.spec.ts"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "extendedDiagnostics": {
+      "checks": {
+        "nullishCoalescingNotNullable": "suppress",
+        "optionalChainNotNullable": "suppress"
+      }
+    }
+  }
 }
